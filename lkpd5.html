@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD 5</title>
+</head>
+<body>
+    <script>
+        //  1.CETAK 1 -  50
+        for(let i = 1; i <= 50; i++)
+        console.log(i)
+        // END
+
+        // 2.GANJIL 1-50
+        for(let x = 1; x <= 50; x++)
+        if(x%2==1){
+            console.log(x + " Ganjil ")
+        }
+        // END
+
+        // 3.GENAP 1-50
+        for(let w = 1; w <= 50; w++)
+        if(w%2==0){
+            console.log(w + " Genap ")
+        }
+        // END
+
+        // 4.GANJIL GENAP 1-50
+        for(let y = 1; y <= 50; y++)
+        if(y%2==1){
+            console.log(y + " Bilangan Ganjil ")
+        }
+        else{
+            console.log(y + " Bilangan Genap")
+        }
+        // END
+
+        // 5. TERBESAR, TERKECIL, RATA RATA
+        let total = 0;
+        let tinggi = 0; 
+        let rendah = 100;
+        for (let t = 1; t <= 20; t++){
+            bil = parseInt(prompt("Input bilangan (Hanya angka)"));
+            if (bil > tinggi){
+                tinggi = bil
+            } else {
+                tinggi = tinggi
+                if (bil < rendah) {
+                    rendah = bil
+                } else {
+                    rendah = rendah
+                }
+            }
+            total = total + bil
+        }
+        rata = total / 20
+
+        console.log (`${tinggi} tertinggi ${rendah} terendah ${total} total ${rata} rata-rata`)
+    </script>
+</body>
+</html>

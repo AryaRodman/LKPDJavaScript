@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD 3</title>
+</head>
+<body>
+   <script>
+
+    // HARGA SETELAH DISKON
+    let harga = 50000
+    let diskon = harga * 5/100
+
+    console.log(`Total harga sebelum diskon adalah ${harga} total  diskon adalah ${diskon} Jadi, harga setelah kena diskon adalah ${harga - diskon}`)
+
+    // END
+
+    // BILANGAN
+    let bilangan = 1234567;
+
+    let satuan = bilangan %10
+    let puluhan = Math.floor((bilangan % 100) / 10)
+    let ratusan = Math.floor((bilangan % 1000) / 100)
+
+    console.log("Satuan: " + satuan);
+    console.log("Puluhan: " + puluhan);
+    console.log("Ratusan: " + ratusan);
+
+    // END
+
+    // CUACA
+    let suhuFahren = 75
+    let suhuCelcius = (suhuFahren - 32) * 5/9
+
+    if(suhuCelcius >= 300){
+        console.log("Panas")
+    }
+    else if(suhuCelcius <= 250){
+        console.log("Dingin")
+    }
+    else{
+        console.log("Normal")
+    }
+    // END
+
+    
+   </script> 
+</body>
+</html>

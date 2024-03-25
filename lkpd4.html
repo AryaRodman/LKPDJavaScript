@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD 4</title>
+</head>
+<body>
+    <script>
+        // NILAI RATA RATA
+
+        let nama = "Iqbal"
+        let pabp = 70
+        let dpk = 77
+        let mtk = 82
+        let ratarata = (mtk + dpk + pabp) / 3
+        
+        console.log("Namanya " + nama)
+        if(ratarata >= 80 && ratarata <= 100){
+            console.log("A")
+        }
+        else if(ratarata >= 75 && ratarata < 80){
+            console.log("B")
+        }
+        else if(ratarata >= 65 && ratarata < 75){
+            console.log("C")
+        }
+        else if(ratarata >= 45 && ratarata < 65){
+            console.log("D")
+        }
+        else if(ratarata >= 0 && ratarata < 45){
+            console.log("E")
+        }
+        else{
+            console.log("K")
+        }
+        // END
+
+        // KODEPEGAWAI
+        function kodegawe(kode) {
+                var golongan = kode [0]
+                var tanggal = kode.substring (1,3);
+                var tahun = kode.substring (3,7);
+                var month = kode.substring (7,9);
+                var nourut = kode.substring (9,11);
+                var bulan;
+        switch(month){
+            case  '01': bulan = 'Januari'; break;
+            case  '02': bulan = 'Februari'; break;
+            case  '03': bulan = 'Maret'; break;
+            case  '04': bulan = 'April'; break;
+            case  '05': bulan = 'Mei'; break;
+            case  '06': bulan = 'Juni'; break;
+            case  '07': bulan = 'Juli'; break;
+            case  '08': bulan = 'Agustus'; break;
+            case  '09': bulan = 'September'; break;
+            case  '10': bulan = 'Oktober'; break;
+            case  '11': bulan = 'November'; break;
+            case  '12': bulan = 'Desember'; break;
+        }
+        console.log("Golongan " + golongan)
+        console.log("Tanggal " + tanggal)
+        console.log("Tahun " + tahun)
+        console.log("Bulan " + bulan)
+        console.log("No Urut " + nourut)
+        
+    }
+    kodegawe("21720080903")
+    // END
+
+    // TAMBAH 1 DETIK
+    function tambahSatuDetik(waktu) {
+            let [jam, menit, detik] = waktu.split(':').map(Number);
+
+            if (detik < 59) {
+                detik += 1;
+            } else {
+                detik = 0;
+                if (menit < 59) {
+                    menit += 1;
+                } else {
+                    menit = 0;
+                    if (jam < 23) {
+                        jam += 1;
+                    } else {
+                        jam = 0;
+                    }
+                }
+            }
+
+            return `${jam.toString().padStart(2, '0')}:${menit.toString().padStart(2, '0')}:${detik.toString().padStart(2, '0')}`;
+        }
+
+        let waktu1 = '02:13:23';
+        let waktu2 = '02:13:59';
+        let waktu3 = '02:59:59';
+        let waktu4 = '23:59:59';
+
+        console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu1)}`);
+        console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu2)}`);
+        console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu3)}`);
+        console.log(`Setelah penambahan 1 detik: ${tambahSatuDetik(waktu4)}`);
+        // END
+    </script>
+</body>
+</html>
